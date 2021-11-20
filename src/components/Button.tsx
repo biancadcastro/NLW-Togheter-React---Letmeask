@@ -1,6 +1,13 @@
 import { useState } from "react";
 
-export function Button() {
+type BananaProps = {
+
+  children?: string
+
+};
+
+
+export function Button(props: BananaProps) {
 
   const [counter, setCounter] = useState(0)
 
@@ -13,6 +20,8 @@ export function Button() {
   return (
 
     <button onClick={increment}>
+
+      {props.children /*|| 'Default'*/}
 
       {counter}
 
